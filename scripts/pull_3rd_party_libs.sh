@@ -4,8 +4,8 @@
 #
 
 # Bootstrap and Icons
-BSI_VERSION=1.12.1
-BOOTSTRAP_VERSION=5.3.6
+BSI_VERSION=1.13.1
+BOOTSTRAP_VERSION=5.3.7
 BASEPATH=${JS_LIBS_BASEPATH:-/machinaris/web/static/3rd_party}
 
 # Mapping library
