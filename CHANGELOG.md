@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.5.6] - 2025-09-26
+### Added
+### Changed
+ - [Chia](https://github.com/Chia-Network/chia-blockchain/releases/tag/2.5.6) to v2.5.6 - misc improvements, see their release notes.
+ - [Gigahorse](https://github.com/madMAx43v3r/chia-gigahorse/releases/tag/v2.5.5.giga36) to v2.5.5.giga36.  NOTE: Only for AMD64, so ARM64 uses an old version.
+
 ## [2.5.5] - 2025-08-20
 ### Added
 ### Changed
