@@ -25,7 +25,16 @@ class Challenges:
                         'time_taken': str(re.search(r'took ([0-9]+\.?[0-9]*(?:[Ee]\ *-?\ *[0-9]+)?) sec', line, re.IGNORECASE).group(1)) + ' secs',
                         'created_at': line[:19]  # example at line start: 2022-01-25 10:14:33
                     })
-                else: # All Chia forks
+                elif blockchain == 'chia':
+                    self.rows.append({
+                        'challenge_id': re.search(r'challenge_hash: (\w{10})', line, re.IGNORECASE).group(1) + '...',
+                        'plots_past_filter': str(re.search(r'(\d+) plots were eligible', line, re.IGNORECASE).group(1)) + \
+                             '/' + str(re.search(r'Total (\d+) plots', line, re.IGNORECASE).group(1)),
+                        'proofs_found': int(re.search(r'Found (\d+) V1 proofs', line, re.IGNORECASE).group(1)),
+                        'time_taken': str(re.search(r'Time: (\d+\.?\d*) s.', line, re.IGNORECASE).group(1)) + ' secs',
+                        'created_at': line.split()[0].replace('T', ' ')
+                    })
+                else: # All legacy Chia forks
                     self.rows.append({
                         'challenge_id': re.search(r'eligible for farming (\w+)', line, re.IGNORECASE).group(1) + '...',
                         'plots_past_filter': str(re.search(r'INFO\s*(\d+) plots were eligible', line, re.IGNORECASE).group(1)) + \
