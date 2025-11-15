@@ -335,7 +335,7 @@ def load_schedule():
             return json.dumps(json.loads(open(PLOTTING_SCHEDULES,'r').read()))
         except Exception as ex:
             app.logger.error("Failed to read plotting schedule from {0} due to {1}.".format(PLOTTING_SCHEDULES, str(ex)))
-    return [] # Return an empty schedule response if not present.
+    return "[]" # Return an empty schedule response if not present.
 
 # A reference to the scheduler
 saved_scheduler = None
