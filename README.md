@@ -1,3 +1,11 @@
+# Project Closure 
+
+Hi all, as an update on the future of Machinaris, I want to set everyone's expectations for CNI group's plans for Chia's new plot format.  Machinaris is essentially a bundling of various tools and forks that sprouted up around Chia when it first appeared years ago.  With the loss of interest in Chia, all those related tools have been dropped by their authors.
+
+As well, my own interest in the Chia ecosystem has waned considerably, so I simply don't want to invest a lot of upcoming time in trying to patch all the various old tools (plotman, chiadog, madmax, gigahorse, bladebit, etc...) that will inevitably break/change when CNI's new plot format finally drops.
+
+I think this will likely mean the end of this project.   For those that want to continue running Machinaris against the current format plots, using Chia 2.5.X, that should be possible until CNI releases an urgent security fix or some other backwards-incompatible change.  Thanks everyone for the support over the years, it's been fun. 
+
 # machinaris
 
 A Docker image for plotting and farming the Chia™ cryptocurrency on [one computer](https://github.com/guydavis/machinaris/wiki/Docker) or across [many](https://github.com/guydavis/machinaris/wiki/Workers).  Try the easy install using the [Launch Wizard](https://machinaris.app).
