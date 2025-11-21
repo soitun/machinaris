@@ -2,10 +2,11 @@
 
 All notable changes to this project will be documented in this file. The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [2.5.7] - 2025-11-15
+## [2.5.7] - 2025-11-21
 ### Added
 ### Changed
  - [Chia](https://github.com/Chia-Network/chia-blockchain/releases/tag/2.5.7) to v2.5.7 - misc improvements, see their release notes.
+ - Fixes to Machinaris and Chiadog to handle the breakage caused by Chia changing their harvester logging format.
 
 ## [2.5.6] - 2025-09-26
 ### Added
