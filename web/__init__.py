@@ -51,7 +51,42 @@ if __name__ != '__main__':
 
 app.logger.debug("CONTROLLER_HOST={0}".format(app.config['CONTROLLER_HOST']))
 
-from web import routes
+# Blueprints
+from web.blueprints.landing import landing_bp
+from web.blueprints.setup import setup_bp
+from web.blueprints.index import index_bp
+from web.blueprints.controller import controller_bp
+from web.blueprints.plotting import plotting_bp
+from web.blueprints.farming import farming_bp
+from web.blueprints.alerts import alerts_bp
+from web.blueprints.wallet import wallet_bp
+from web.blueprints.keys import keys_bp
+from web.blueprints.workers import workers_bp
+from web.blueprints.drives import drives_bp
+from web.blueprints.blockchains import blockchains_bp
+from web.blueprints.connections import connections_bp
+from web.blueprints.pools import pools_bp
+from web.blueprints.settings import settings_bp
+from web.blueprints.logs import logs_bp
+from web.blueprints.transactions import transactions_bp
+
+app.register_blueprint(landing_bp)
+app.register_blueprint(setup_bp)
+app.register_blueprint(index_bp)
+app.register_blueprint(controller_bp)
+app.register_blueprint(plotting_bp)
+app.register_blueprint(farming_bp)
+app.register_blueprint(alerts_bp)
+app.register_blueprint(wallet_bp)
+app.register_blueprint(keys_bp)
+app.register_blueprint(workers_bp)
+app.register_blueprint(drives_bp)
+app.register_blueprint(blockchains_bp)
+app.register_blueprint(connections_bp)
+app.register_blueprint(pools_bp)
+app.register_blueprint(settings_bp)
+app.register_blueprint(logs_bp)
+app.register_blueprint(transactions_bp)
 
 # Jinja template filters
 @app.template_filter()

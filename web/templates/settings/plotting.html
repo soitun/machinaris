@@ -128,7 +128,7 @@
                 $("#btnDownload").prop('disabled', true);
                 jqxhr = $.ajax({
                     type: "GET",
-                    url: "{{ url_for('views_settings_config') }}?type=plotting&worker=" + worker + "&blockchain=" + blockchain,
+                    url: "{{ url_for('settings.config') }}?type=plotting&worker=" + worker + "&blockchain=" + blockchain,
                 })
                     .done(function (data) {
                         //console.log(data);
@@ -154,7 +154,7 @@
             function load_dirs(worker, blockchain) {
                 $('#dirs_listing').hide();
                 jqxhr = $.getJSON({
-                    url: "{{ url_for('views_settings_config') }}?type=plotting_dirs&worker=" + worker + "&blockchain=" + blockchain,
+                    url: "{{ url_for('settings.config') }}?type=plotting_dirs&worker=" + worker + "&blockchain=" + blockchain,
                 })
                     .done(function (data) {
                         if ('errors' in data) {
@@ -198,7 +198,7 @@
             }
             function load_schedule(worker, blockchain) {
                 jqxhr = $.getJSON({
-                    url: "{{ url_for('views_settings_config') }}?type=plotting_schedule&worker=" + worker + "&blockchain=" + blockchain,
+                    url: "{{ url_for('settings.config') }}?type=plotting_schedule&worker=" + worker + "&blockchain=" + blockchain,
                 })
                     .done(function (data) {
                         $('#schedules').empty()
@@ -302,7 +302,7 @@
                 'blockchain': $("#blockchain").val(),
                 'schedules': JSON.stringify(schedules)
             }
-            jqxhr = $.post("{{ url_for('settings_plotting') }}", data, 
+            jqxhr = $.post("{{ url_for('plotting.settings') }}", data, 
                 function(response) {
                     console.log(response);
                 }, 'json');
