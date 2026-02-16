@@ -4,7 +4,7 @@ Hi all, as an update on the future of Machinaris, I want to set everyone's expec
 
 As well, my own interest in the Chia ecosystem has waned considerably, so I simply don't want to invest a lot of upcoming time in trying to patch all the various old tools (plotman, chiadog, madmax, gigahorse, bladebit, etc...) that will inevitably break/change when CNI's new plot format finally drops.
 
-I think this will likely mean the end of this project.   For those that want to continue running Machinaris against the current format plots, using Chia 2.5.X, that should be possible until CNI releases an urgent security fix or some other backwards-incompatible change.  Thanks everyone for the support over the years, it's been fun. 
+I think this will likely mean the end of this project.   For those that want to continue running Machinaris against the current format plots, using Chia 2.6.X, that should be possible until CNI releases an urgent security fix or some other backwards-incompatible change.  Thanks everyone for the support over the years, it's been fun. 
 
 # machinaris
 
