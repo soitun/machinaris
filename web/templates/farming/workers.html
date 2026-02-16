@@ -22,13 +22,13 @@
     <div class="container-fluid">
         <ul class="nav nav-tabs bg-dark">
             <li class="nav-item">
-                <a class="nav-link" href="{{ url_for('farming_plots') }}">{{_('Plots')}}</a>
+                <a class="nav-link" href="{{ url_for('farming.plots') }}">{{_('Plots')}}</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="{{ url_for('farming_workers') }}">{{_('Workers')}}</a>
+                <a class="nav-link active" aria-current="page" href="{{ url_for('farming.workers') }}">{{_('Workers')}}</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{ url_for('farming_warnings') }}">{{_('Warnings')}}</a>
+                <a class="nav-link" href="{{ url_for('farming.warnings_page') }}">{{_('Warnings')}}</a>
             </li>
         </ul>
     </div>
@@ -70,7 +70,7 @@
                     </tr>
                     <tr>
                         <th scope="col" class="text-success">{{_('Hostname')}}</th>
-                        <td><a class='text-white' href="{{ url_for('workers') }}">{{farmer.displayname}}</a></td>
+                        <td><a class='text-white' href="{{ url_for('workers.index') }}">{{farmer.displayname}}</a></td>
                     </tr>
                     <tr>
                         <th scope="col" class="text-success">{{_('Blockchains Farming')}}</th>
@@ -86,7 +86,7 @@
                     </tr>
                     <tr>
                         <th scope="col" class="text-success">{{_('Drive Count')}}</th>
-                        <td><a class='text-white' href="{{ url_for('drives') }}">{{farmer.drive_count}} {{_('devices')}}</a></td>
+                        <td><a class='text-white' href="{{ url_for('drives.index') }}">{{farmer.drive_count}} {{_('devices')}}</a></td>
                     </tr>
                     <tr>
                         <th scope="col" class="text-success">{{_('Drive Usage')}}</th>
