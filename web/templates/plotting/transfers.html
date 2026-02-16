@@ -98,13 +98,13 @@
     <div class="container-fluid">
         <ul class="nav nav-tabs bg-dark">
             <li class="nav-item">
-                <a class="nav-link" href="{{ url_for('plotting_jobs') }}">{{_('Jobs')}}</a>
+                <a class="nav-link" href="{{ url_for('plotting.jobs') }}">{{_('Jobs')}}</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="{{ url_for('plotting_transfers') }}">{{_('Transfers')}}</a>
+                <a class="nav-link active" aria-current="page" href="{{ url_for('plotting.transfers') }}">{{_('Transfers')}}</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{ url_for('plotting_workers') }}">{{_('Workers')}}</a>
+                <a class="nav-link" href="{{ url_for('plotting.workers') }}">{{_('Workers')}}</a>
             </li>
         </ul>
         <form method="POST" id="plotman-form" style="padding-bottom: 10px;">
@@ -340,9 +340,9 @@
             var top = (screen.height - height) / 2;
             var left = (screen.width - width) / 2;
             if (typeof log_file !== 'undefined') {
-                window.open("{{ url_for('logs') }}?log=" + type + "&hostname=" + hostname + "&blockchain=" + blockchain + "&log_id=" + log_file, 'Transfer Log ' + plot_id + ' on ' + hostname, 'resizeable=yes,scrollbars=yes,height=' + height + ',width=' + width + ',top=' + top + ',left=' + left).focus();
+                window.open("{{ url_for('logs.index') }}?log=" + type + "&hostname=" + hostname + "&blockchain=" + blockchain + "&log_id=" + log_file, 'Transfer Log ' + plot_id + ' on ' + hostname, 'resizeable=yes,scrollbars=yes,height=' + height + ',width=' + width + ',top=' + top + ',left=' + left).focus();
             } else {
-                window.open("{{ url_for('logs') }}?log=" + type + "&hostname=" + hostname + "&blockchain=" + blockchain, 'Archiver Log on ' + hostname, 'resizeable=yes,scrollbars=yes,height=' + height + ',width=' + width + ',top=' + top + ',left=' + left).focus();
+                window.open("{{ url_for('logs.index') }}?log=" + type + "&hostname=" + hostname + "&blockchain=" + blockchain, 'Archiver Log on ' + hostname, 'resizeable=yes,scrollbars=yes,height=' + height + ',width=' + width + ',top=' + top + ',left=' + left).focus();
             }
         }
         $(document).ready(function () {

@@ -78,7 +78,7 @@
                 $("#btnDownload").prop('disabled', true);
                 $.ajax({
                     type: "GET",
-                    url: "{{ url_for('views_settings_config') }}?type=tools&worker=" + worker + "&blockchain=" + blockchain,
+                    url: "{{ url_for('settings.config') }}?type=tools&worker=" + worker + "&blockchain=" + blockchain,
                 })
                     .done(function (data) {
                         $("#config").val(data)

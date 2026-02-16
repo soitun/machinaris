@@ -94,7 +94,7 @@
             <tr>
                 <td>
                 {% if summary.blockchain in fullnodes %} 
-                <a class="text-white" href="{{ url_for('worker_route') }}?hostname={{ fullnodes[summary.blockchain].hostname }}&blockchain={{ summary.blockchain }}">{{summary.blockchain}}</a></td>
+                <a class="text-white" href="{{ url_for('workers.worker_route') }}?hostname={{ fullnodes[summary.blockchain].hostname }}&blockchain={{ summary.blockchain }}">{{summary.blockchain}}</a></td>
                 {% else %} 
                 {{summary.blockchain}}
                 {% endif %}
@@ -152,7 +152,7 @@ function ViewLogs(hostname, blockchain) {
     var width = 900;
     var top = (screen.height - height) / 2;
     var left = (screen.width - width) / 2;
-    window.open("{{ url_for('logs') }}?log=farming" + "&hostname=" + hostname + "&blockchain=" + blockchain, '{{_('Fullnode Log for ')}}' + blockchain + ' - ' + hostname, 'resizeable=yes,scrollbars=yes,height=' + height + ',width=' + width + ',top=' + top + ',left=' + left).focus();
+    window.open("{{ url_for('logs.index') }}?log=farming" + "&hostname=" + hostname + "&blockchain=" + blockchain, '{{_('Fullnode Log for ')}}' + blockchain + ' - ' + hostname, 'resizeable=yes,scrollbars=yes,height=' + height + ',width=' + width + ',top=' + top + ',left=' + left).focus();
 }
 function PopupChart(chart_type, blockchain) {
     var d = new Date();
@@ -160,7 +160,7 @@ function PopupChart(chart_type, blockchain) {
     var width = 900;
     var top = (screen.height - height) / 2;
     var left = (screen.width - width) / 2;
-    window.open("{{ url_for('chart') }}?type=" + chart_type + "&blockchain=" + blockchain, blockchain + ' - ' + chart_type, 'resizeable=yes,scrollbars=yes,height=' + height + ',width=' + width + ',top=' + top + ',left=' + left).focus();
+    window.open("{{ url_for('index.chart') }}?type=" + chart_type + "&blockchain=" + blockchain, blockchain + ' - ' + chart_type, 'resizeable=yes,scrollbars=yes,height=' + height + ',width=' + width + ',top=' + top + ',left=' + left).focus();
 }
 $(document).ready(function () {
     $("#btnSave").click(function () {

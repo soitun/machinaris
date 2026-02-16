@@ -90,8 +90,8 @@
 
 <div class="position-relative">
   <div class="position-absolute top-0 end-0">
-      <a href="{{ url_for('drives') }}?view=grid" title="Grid View"><i class="fs-4 bi-grid"></i></a>
-      <a href="{{ url_for('drives') }}?view=table" title="Table View"><i class="fs-4 bi-table"></i></a>
+      <a href="{{ url_for('drives.index') }}?view=grid" title="Grid View"><i class="fs-4 bi-grid"></i></a>
+      <a href="{{ url_for('drives.index') }}?view=table" title="Table View"><i class="fs-4 bi-table"></i></a>
       &nbsp;
       <a href="#" title="{{_('Settings')}}" data-bs-toggle="modal" data-bs-target="#settingsModal" target="_blank"><i class="fs-4 bi-gear"></i></a>
       &nbsp;
@@ -296,7 +296,7 @@
         var width = 900;
         var top = (screen.height - height) / 2;
         var left = (screen.width - width) / 2;
-        window.open("{{ url_for('logs') }}?log=" + type + "&hostname=" + hostname + "&blockchain=" + blockchain, 'Machinaris ' + type + '.log on ' + hostname, 'resizeable=yes,scrollbars=yes,height=' + height + ',width=' + width + ',top=' + top + ',left=' + left).focus();
+        window.open("{{ url_for('logs.index') }}?log=" + type + "&hostname=" + hostname + "&blockchain=" + blockchain, 'Machinaris ' + type + '.log on ' + hostname, 'resizeable=yes,scrollbars=yes,height=' + height + ',width=' + width + ',top=' + top + ',left=' + left).focus();
     }
     function SmartctlDeviceInfo(ip_addr, device, hostname, model, family) {
             var output = document.getElementById('smartctlHeader');
@@ -304,7 +304,7 @@
             var output = document.getElementById('smartctlContent');
             output.textContent = ""; // Clear any old info before requesting
             var xhr = new XMLHttpRequest();
-            xhr.open('GET', "{{ url_for('drives') }}?hostname=" + encodeURIComponent(ip_addr) + "&device=" + encodeURIComponent(device));
+            xhr.open('GET', "{{ url_for('drives.index') }}?hostname=" + encodeURIComponent(ip_addr) + "&device=" + encodeURIComponent(device));
             xhr.send();
             xhr.onload = function () {
                 output.textContent = xhr.responseText;
