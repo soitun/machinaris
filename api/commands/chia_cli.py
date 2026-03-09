@@ -301,9 +301,9 @@ def remove_connection(node_ids, blockchain):
     for node_id in node_ids:
         try:
             if blockchain in BLOCKCHAINS_USING_PEER_CMD:  # These now support only the 'peer' command
-                proc = Popen("{0} peer --add-connection {1} full_node".format(chia_binary, node_id), cwd=working_dir, stdout=PIPE, stderr=PIPE, shell=True)
+                proc = Popen("{0} peer --remove-connection {1} full_node".format(chia_binary, node_id), cwd=working_dir, stdout=PIPE, stderr=PIPE, shell=True)
             else:
-                proc = Popen("{0} show --add-connection {1}".format(chia_binary, node_id), cwd=working_dir, stdout=PIPE, stderr=PIPE, shell=True)
+                proc = Popen("{0} show --remove-connection {1}".format(chia_binary, node_id), cwd=working_dir, stdout=PIPE, stderr=PIPE, shell=True)
             try:
                 outs, errs = proc.communicate(timeout=5)
                 if errs:
