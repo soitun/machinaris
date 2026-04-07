@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.7.0] - 2026-04-06
+### Added
+### Changed
+### Updated
+ - [Chia](https://github.com/Chia-Network/chia-blockchain/releases/tag/2.7.0) to v2.7.0 -  misc improvements, see their release notes.
+ - [Gigahorse](https://github.com/madMAx43v3r/chia-gigahorse/releases/tag/v2.7.0.giga37) - NOTE, This is *untested* with Machinaris as I no longer run Gigahorse.
+
 ## [2.6.0] - 2026-02-16
 ### Added
 ### Changed
